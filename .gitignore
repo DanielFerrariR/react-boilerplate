@@ -5,3 +5,4 @@ storybook-static
 .stylelintcache
 jest_coverage
 circularDependencies.json
+.env
