@@ -34,7 +34,6 @@
 
 1. **Install these packages (prefer the listed versions):**
 
-- yarn 1.22.21
 - npm 10.2.3
 - node 20.10.0
 
@@ -44,74 +43,71 @@
 EXAMPLE_KEY=
 ```
 
-3. **Install all dependencies with yarn (not npm!!)**
+3. **Install all dependencies**
 
 ```sh
-yarn
+npm run install
 ```
 
 4. **Start the webpack-dev-server**
 
 ```sh
-yarn dev
+npm run dev
 ```
 
 5. **Commands**
 
 ```bash
 # Installs all dependendies
-$ yarn
+$ npm run
 
-# Runs for web production (needs yarn build first)
-$ yarn start
+# Runs for web production (needs npm run build first)
+$ npm run start
 
 # Runs for web development
-$ yarn dev
+$ npm run dev
 
 # Builds for web (compiled to build folder)
-$ yarn build
+$ npm run build
 
 # Runs unit tests with Jest
-$ yarn test (picks automatically test:watch on local machine and test:coverage on CI)
-$ yarn test:coverage (creates coverage folder)
-$ yarn test:watch (with --watch flag)
-$ yarn test:debug (to use chrome to debug jest tests)
+$ npm run test (picks automatically test:watch on local machine and test:coverage on CI)
+$ npm run test:coverage (creates coverage folder)
+$ npm run test:watch (with --watch flag)
+$ npm run test:debug (to use chrome to debug jest tests)
 
 # Checks Eslint errors
-$ yarn lint:eslint
+$ npm run lint:eslint
 
 # Checks Stylelint errors
-$ yarn lint:stylelint
+$ npm run lint:stylelint
 
 # Formats all files with prettier
-$ yarn format
+$ npm run format
 
 # Checks if all files are formatted with prettier
-$ yarn check-format
+$ npm run check-format
 
 # Checks typescript errors
-$ yarn check-types
+$ npm run check-types
 
 # CI validation command
-$ yarn setup
+$ npm run setup
 
 # Run Storybook
-$ yarn storybook
+$ npm run storybook
 
 # Build Storybook
-$ yarn build-storybook
+$ npm run build-storybook
 
 # Analyzes the compiled files with webpack-bundle-analyzer
-$ yarn analyze
+$ npm run analyze
 
 # Checks for circular dependencies during development build
-$ yarn check_circular
+$ npm run check_circular
 
 # Generate json file with circular dependencies
-$ yarn check_circular:write
-
-# Commits with karma interface
-$ yarn commit
+$ npm run check_circular:write
 ```
 
 ## Tests
@@ -121,12 +117,12 @@ $ yarn commit
 ## CI configuration
 
 - Set the environment variables in the CI environment variable section.
-- The only command needed to be put on CI is 'yarn setup' which tests formatting with prettier, eslint errors, typescript errors and all tests.
+- The only command needed to be put on CI is 'npm run setup' which tests formatting with prettier, eslint errors, typescript errors and all tests.
 
 ## Deploy
 
 1. First, be sure you did all steps from the configuration section.
-2. 'yarn build' command will compile all files and put them into build folder.
+2. 'npm run build' command will compile all files and put them into build folder.
 3. Install Apache. (I'm using XAMPP for this example. Link: [Apache](https://www.apachefriends.org/download.html))
 4. Clean up htdocs folder of xampp/htdocs.
 5. Put all files from dist folder into xampp/htdocs folder.
