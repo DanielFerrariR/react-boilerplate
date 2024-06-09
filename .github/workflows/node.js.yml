@@ -12,5 +12,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.10.0'
-      - run: npm run setup
-      - run: npx codecov@3
+      - name: Install dependencies and all tests
+        run: npm run setup
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
