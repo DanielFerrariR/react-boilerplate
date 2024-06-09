@@ -6,10 +6,7 @@
   <img src="https://img.shields.io/badge/version-1.0.0-blue" />
 </a>
 
-<a align="center" href="https://travis-ci.com/github/DanielFerrariR/react-boilerplate">
-  <img src="https://api.travis-ci.com/DanielFerrariR/react-boilerplate.svg?branch=master" />
-</a>
-
+[![Node.js CI](https://github.com/DanielFerrariR/react-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/DanielFerrariR/react-boilerplate/actions/workflows/node.js.yml)
 [![codecov](https://codecov.io/gh/DanielFerrariR/react-boilerplate/branch/master/graph/badge.svg?token=xqzOMvxham)](https://codecov.io/gh/DanielFerrariR/react-boilerplate)
 
 ## TOC
@@ -140,5 +137,4 @@ RewriteRule . /index.html [L]
 
 ## Links
 
-[Codcov](https://app.codecov.io/gh/DanielFerrariR/map-challenge)
 [Website](https://fluffy-griffin-fa508e.netlify.app)
