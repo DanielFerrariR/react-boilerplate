@@ -5,7 +5,7 @@
   "scripts": {
     "prepare": "husky",
     "setup": "npm install && npm run validate",
-    "validate": "npm-run-all --parallel check-types check-format lint:eslint lint:stylelint test",
+    "validate": "npm-run-all --parallel check-types check-format lint:eslint lint:stylelint test:coverage",
     "start": "serve --no-clipboard --single --listen 3000 build",
     "dev": "cross-env-shell WEBPACK_DEV_SERVER=true \"webpack-dev-server --mode development\"",
     "build": "webpack --mode production",
@@ -21,8 +21,7 @@
     "format": "prettier --write .",
     "check-format": "prettier --list-different .",
     "check-types": "tsc",
-    "test": "is-ci \"test:coverage\" \"test:watch\"",
-    "test:watch": "jest --watch",
+    "test": "jest --watch",
     "test:coverage": "jest --coverage",
     "test:debug": "node --inspect-brk node_modules/.bin/jest --runInBand --watch"
   },
