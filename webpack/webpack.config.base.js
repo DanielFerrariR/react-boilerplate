@@ -2,6 +2,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const fs = require('fs');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -9,6 +11,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
   const isDevServer = process.env.WEBPACK_DEV_SERVER === 'true';
+  const isAnalyze = process.env.IS_ANALYZE === 'true';
   const loaders = require('./loaders')(env, argv);
 
   return {
@@ -17,17 +20,24 @@ module.exports = (env, argv) => {
     },
     output: {
       path: path.resolve(__dirname, '../build'),
-      filename: isProduction ? '[name].[contenthash].js' : '[name].js',
+      filename:
+        isProduction && !isAnalyze ? '[name].[contenthash].js' : '[name].js',
       publicPath: '/',
     },
     module: {
       rules: Object.values(loaders),
     },
     plugins: [
+      new Dotenv({
+        path: path.resolve(__dirname, '.env'),
+        systemvars: true,
+        safe: path.resolve(__dirname, '.env.example'),
+      }),
       new webpack.ProvidePlugin({
         // Needed because webpack 5 stopped to add node.js APIs automatically
         Buffer: ['buffer', 'Buffer'],
       }),
+      new CleanPlugin.CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         title: 'React Boilerplate',
         template: path.resolve(__dirname, '../public/index.html'),
