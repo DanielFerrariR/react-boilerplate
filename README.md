@@ -2,10 +2,7 @@
   React Boilerplate
 </h1>
 
-<a align="center" href="./CHANGELOG.md">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue" />
-</a>
-
+![Website Badge](https://img.shields.io/badge/version-1.0.0-blue)
 [![Node.js CI](https://github.com/DanielFerrariR/react-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/DanielFerrariR/react-boilerplate/actions/workflows/node.js.yml)
 [![codecov](https://codecov.io/gh/DanielFerrariR/react-boilerplate/branch/master/graph/badge.svg?token=xqzOMvxham)](https://codecov.io/gh/DanielFerrariR/react-boilerplate)
 
@@ -29,30 +26,30 @@
 
 ## Configuration
 
-1. **Install these packages (prefer the listed versions):**
+1.  **Install these packages (prefer the listed versions):**
 
 - npm 10.2.3
 - node 20.10.0
 
-2. **Create a .env file with the required variables:**
+2.  **Create a .env file with the required variables:**
 
 ```sh
 EXAMPLE_KEY=
 ```
 
-3. **Install all dependencies**
+3.  **Install all dependencies**
 
 ```sh
 npm run install
 ```
 
-4. **Start the webpack-dev-server**
+4.  **Start the webpack-dev-server**
 
 ```sh
 npm run dev
 ```
 
-5. **Commands**
+5.  **Commands**
 
 ```bash
 # Installs all dependendies
@@ -118,13 +115,13 @@ $ npm run check_circular:write
 
 ## Deploy
 
-1. First, be sure you did all steps from the configuration section.
-2. 'npm run build' command will compile all files and put them into build folder.
-3. Install Apache. (I'm using XAMPP for this example. Link: [Apache](https://www.apachefriends.org/download.html))
-4. Clean up htdocs folder of xampp/htdocs.
-5. Put all files from dist folder into xampp/htdocs folder.
-6. Open XAMPP and, on the line of module apache, click on the 'Start' button.
-7. Access 'localhost' from your browser and see that the page loads correctly. It will still not work if you try to access a route manually (like 'localhost/login'). See below how to fix it.
+1.  First, be sure you did all steps from the configuration section.
+2.  'npm run build' command will compile all files and put them into build folder.
+3.  Install Apache. (I'm using XAMPP for this example. Link: [Apache](https://www.apachefriends.org/download.html))
+4.  Clean up htdocs folder of xampp/htdocs.
+5.  Put all files from dist folder into xampp/htdocs folder.
+6.  Open XAMPP and, on the line of module apache, click on the 'Start' button.
+7.  Access 'localhost' from your browser and see that the page loads correctly. It will still not work if you try to access a route manually (like 'localhost/login'). See below how to fix it.
 
 - For react router works correctly, you need to create a file '.htaccess' in the root of htdocs directory. Put this info there:
 
@@ -137,4 +134,4 @@ RewriteRule . /index.html [L]
 
 ## Links
 
-[Website](https://fluffy-griffin-fa508e.netlify.app)
+[![Website Badge](https://img.shields.io/badge/Website-orange)](https://fluffy-griffin-fa508e.netlify.app)
