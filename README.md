@@ -134,4 +134,5 @@ RewriteRule . /index.html [L]
 
 ## Links
 
-[![Website Badge](https://img.shields.io/badge/Website-orange)](https://fluffy-griffin-fa508e.netlify.app)
+[![Website Badge](https://img.shields.io/badge/Website-blue)](https://fluffy-griffin-fa508e.netlify.app)
+[![Storybook Badge](https://img.shields.io/badge/Storybook-ff4785)](https://mellifluous-bombolone-aea06d.netlify.app)
