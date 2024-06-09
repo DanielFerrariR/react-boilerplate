@@ -17,6 +17,5 @@ jobs:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
-          directory: ./coverage/
-          files: ./clover.xml
+          files: ./coverage/clover.xml
           token: ${{ secrets.CODECOV_TOKEN }}
