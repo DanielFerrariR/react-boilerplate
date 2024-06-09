@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './theme/reset.scss';
-import './theme/globals.scss';
-import './fonts/fonts.css';
+import './theme/reset.css';
+import './theme/globals.css';
+import './theme/fonts.css';
 import { Routes } from './routes';
 
 const root = ReactDOM.createRoot(

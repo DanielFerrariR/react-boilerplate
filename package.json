@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "prepare": "husky",
-    "commit": "git add . && git-cz",
     "setup": "npm install && npm run validate",
     "validate": "npm-run-all --parallel check-types check-format lint:eslint lint:stylelint test",
     "start": "serve --no-clipboard --single --listen 3000 build",
@@ -122,8 +121,7 @@
     "webpack-merge": "^5.10.0",
     "clean-webpack-plugin": "^4.0.0",
     "jest-environment-jsdom": "^29.7.0",
-    "dotenv-webpack": "2.0.0",
-    "commitizen": "4.3.0"
+    "dotenv-webpack": "2.0.0"
   },
   "resolutions": {
     "wrap-ansi": "7.0.0",
@@ -133,10 +131,5 @@
     "*.{js,jsx,ts,tsx,md,mdx}": "eslint --cache --fix",
     "*.scss": "stylelint --cache --fix",
     "*.{js,jsx,ts,tsx,json,md,mdx,html,scss}": "prettier --write"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

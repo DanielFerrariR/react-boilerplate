@@ -46,7 +46,15 @@ const config: StorybookConfig = {
             to: 'fonts',
           },
           {
-            from: path.resolve(__dirname, '../src/fonts/fonts.css'),
+            from: path.resolve(__dirname, '../src/theme/globals.css'),
+            to: '',
+          },
+          {
+            from: path.resolve(__dirname, '../src/theme/reset.css'),
+            to: '',
+          },
+          {
+            from: path.resolve(__dirname, '../src/theme/fonts.css'),
             to: '',
           },
         ],
