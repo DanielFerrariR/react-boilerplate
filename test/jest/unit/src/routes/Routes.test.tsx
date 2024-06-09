@@ -4,5 +4,5 @@ import { Routes } from 'src/routes';
 
 test('renders learn react link', () => {
   render(<Routes />);
-  expect(screen.queryByText(/Hello world/i)).not.toBeInTheDocument();
+  expect(screen.getByText(/Hello world/i)).toBeInTheDocument();
 });
