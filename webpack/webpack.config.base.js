@@ -29,7 +29,7 @@ module.exports = (env, argv) => {
         Buffer: ['buffer', 'Buffer'],
       }),
       new HtmlWebpackPlugin({
-        title: 'Video Platform',
+        title: 'React Boilerplate',
         template: path.resolve(__dirname, '../public/index.html'),
         favicon: path.resolve(__dirname, '../public/favicon.ico'),
         inject: false,
