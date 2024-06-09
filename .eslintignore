@@ -3,6 +3,6 @@ build
 storybook-static
 .eslintcache
 .stylelintcache
-jest_coverage
+coverage
 circularDependencies.json
 .env

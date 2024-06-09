@@ -1,6 +1,6 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  coverageDirectory: 'jest_coverage',
+  coverageDirectory: 'coverage',
   collectCoverageFrom: ['**/src/**/*.{js,jsx,ts,tsx}'],
   testPathIgnorePatterns: ['fixtures', 'config', 'test_utils'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'mdx', 'md'],
