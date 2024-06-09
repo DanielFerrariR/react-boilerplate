@@ -1,8 +1,6 @@
-import React from "react";
-import "./Routes.scss";
+import React from 'react';
+import './Routes.scss';
 
-const Routes = () => {
-  return <div className="Routes">Hello world</div>;
-};
+const Routes = () => <div className="Routes">Hello world</div>;
 
 export default Routes;

@@ -1,0 +1,35 @@
+{
+  "preset": "ts-jest/presets/js-with-babel",
+  "testRegex": "(./.*(\\.|/)test)\\.(j|t)sx?$",
+  "testEnvironment": "jsdom",
+  "testEnvironmentOptions": {
+    "url": "http://127.0.0.1"
+  },
+  "setupFilesAfterEnv": ["./src/tests/config/setup.js"],
+  "transformIgnorePatterns": ["node_modules/(?!(antd|rc-.+|css-animation)/)"],
+  "moduleFileExtensions": ["js", "jsx", "ts", "tsx"],
+  "moduleDirectories": ["node_modules"],
+  "noStackTrace": true,
+  "modulePathIgnorePatterns": ["<rootDir>/artifacts", "<rootDir>/public"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/tests/config/mocks/fileMock.js",
+    "\\.svg": "<rootDir>/src/tests/config/mocks/svgrMock.js",
+    "\\.(css|sass|scss|less)$": "<rootDir>/src/tests/config/mocks/styleMock.js",
+    "^src(.*)$": "<rootDir>/src$1",
+    "^public(.*)$": "<rootDir>/public$1"
+  },
+  "coverageReporters": ["lcov", "cobertura", "text"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 0,
+      "functions": 0,
+      "lines": 0,
+      "statements": 0
+    }
+  },
+  "coverageDirectory": "tests/results/coverage",
+  "transform": {
+    "^.+\\.tsx?$": ["ts-jest", { "tsconfig": "./tsconfig.json" }]
+  },
+  "reporters": ["default"]
+}

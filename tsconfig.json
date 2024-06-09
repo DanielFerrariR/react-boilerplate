@@ -1,16 +1,23 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es5",
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
+    "module": "commonjs",
     "jsx": "react",
+    "noEmit": true,
+    "downlevelIteration": true,
+    "allowJs": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "checkJs": false,
+    "baseUrl": "./",
+    "lib": ["dom", "es2019"],
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "typings", ".storybook"]
+  "include": ["src", "test", "typings", "stories"]
 }

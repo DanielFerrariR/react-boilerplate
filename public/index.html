@@ -2,19 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
+    <meta name="format-detection" content="telephone=no" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- Initial css styles before loading the bundle js file -->
+    <%= htmlWebpackPlugin.options.preload %>
+    <!-- prettier-ignore -->
+    <%= htmlWebpackPlugin
+      .tags
+      .headTags
+      .filter((tag) => !(tag.attributes.src?.startsWith('index') && tag.attributes.src?.endsWith('.js')))
+      .join('') 
+    %>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="pageloader">Loading...</div>
+    </div>
+    <!-- No script page when js isn't enabled -->
+    <noscript>
+      <style>
+        .pageloader {
+          display: none;
+        }
+      </style>
+      <div class="noscript">
+        JavaScript must be enabled to run <%= htmlWebpackPlugin.options.title %>
+      </div>
+    </noscript>
   </body>
 </html>
