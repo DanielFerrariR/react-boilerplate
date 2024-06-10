@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "integrationFolder": "test/cypress/integration",
+  "fixturesFolder": "test/cypress/fixtures",
+  "pluginsFile": "test/cypress/plugins",
+  "screenshotsFolder": "test/cypress/screenshots",
+  "supportFile": "test/cypress/support",
+  "videosFolder": "test/cypress/videos",
+  "viewportHeight": 768,
+  "viewportWidth": 1366,
+  "defaultCommandTimeout": 10000,
+  "videoCompression": false,
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
+}
