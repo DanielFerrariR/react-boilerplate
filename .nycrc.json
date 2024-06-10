@@ -1,0 +1,4 @@
+{
+  "report-dir": "cypress_coverage",
+  "extension": [".js", ".jsx", ".ts", ".tsx"]
+}

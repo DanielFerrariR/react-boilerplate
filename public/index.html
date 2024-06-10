@@ -7,6 +7,15 @@
       content="width=device-width,initial-scale=1,shrink-to-fit=no"
     />
     <meta name="format-detection" content="telephone=no" />
+    <!-- prettier-ignore -->
+    <% if (htmlWebpackPlugin.options.isCypress) { %>
+    <script>
+      if (window.Cypress) {
+        window.__REACT_DEVTOOLS_GLOBAL_HOOK__ =
+          window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+      }
+    </script>
+    <% } %>
     <title><%= htmlWebpackPlugin.options.title %></title>
     <!-- Initial css styles before loading the bundle js file -->
     <%= htmlWebpackPlugin.options.preload %>

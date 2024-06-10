@@ -12,6 +12,7 @@ module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
   const isDevServer = process.env.WEBPACK_DEV_SERVER === 'true';
   const isAnalyze = process.env.IS_ANALYZE === 'true';
+  const isCypress = process.env.IS_CYPRESS === 'true';
   const loaders = require('./loaders')(env, argv);
 
   return {
@@ -42,6 +43,7 @@ module.exports = (env, argv) => {
         title: 'React Boilerplate',
         template: path.resolve(__dirname, '../public/index.html'),
         favicon: path.resolve(__dirname, '../public/favicon.ico'),
+        isCypress,
         inject: false,
         preload: `<style>${fs.readFileSync(
           path.resolve(__dirname, '../public/preload.css'),

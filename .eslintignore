@@ -3,6 +3,14 @@ build
 storybook-static
 .eslintcache
 .stylelintcache
+.nyc_output
 coverage
+jest_coverage
+cypress_coverage
+reports
 circularDependencies.json
 .env
+test/cypress/videos
+test/cypress/screenshots
+test/cypress/downloads
+

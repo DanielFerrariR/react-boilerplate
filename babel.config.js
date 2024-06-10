@@ -1,5 +1,6 @@
 module.exports = (api) => {
   const isTest = api.env('test');
+  const isCypress = process.env.IS_CYPRESS === 'true';
 
   if (isTest) {
     api.cache(() => isTest);
@@ -17,7 +18,7 @@ module.exports = (api) => {
         },
       ],
     ],
-    plugins: [],
+    plugins: [isCypress && 'istanbul'].filter(Boolean),
     compact: true,
   };
 };
