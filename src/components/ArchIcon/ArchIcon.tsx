@@ -25,8 +25,9 @@ const ArchIcon = ({
     // Get the current svg element inside the div element
     const svgElement = divRef.current!.firstChild!;
     // Get the width of the path element inside the svg element
-    const { width } =
-      (svgElement.firstChild as SVGPathElement)!.getBoundingClientRect();
+    const { width } = (
+      svgElement.firstChild as SVGPathElement
+    ).getBoundingClientRect();
     // Create an instance of the wrap class using the svgElement
     const warp = new Warp(svgElement);
     // Transform all points of the svg to be in a new position
