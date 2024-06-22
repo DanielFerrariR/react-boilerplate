@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
@@ -60,14 +59,6 @@ module.exports = (env, argv) => {
           minifyCSS: true,
           minifyJS: true,
         },
-      }),
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: path.resolve(__dirname, '../src/fonts'),
-            to: 'fonts',
-          },
-        ].filter(Boolean),
       }),
       isDevServer && new ReactRefreshWebpackPlugin(),
     ].filter(Boolean),

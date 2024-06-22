@@ -42,19 +42,11 @@ const config: StorybookConfig = {
       new CopyPlugin({
         patterns: [
           {
-            from: path.resolve(__dirname, '../src/fonts'),
-            to: 'fonts',
-          },
-          {
             from: path.resolve(__dirname, '../src/theme/globals.css'),
             to: '',
           },
           {
             from: path.resolve(__dirname, '../src/theme/reset.css'),
-            to: '',
-          },
-          {
-            from: path.resolve(__dirname, '../src/theme/fonts.css'),
             to: '',
           },
         ],
