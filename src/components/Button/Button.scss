@@ -1,0 +1,50 @@
+.button {
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Inter';
+  font-size: 1.2rem;
+  font-weight: 600;
+  gap: 0.8rem;
+  line-height: 1.25;
+  padding: 0.65rem 1.3rem;
+
+  &__primary {
+    background-color: var(--button-primary-idle-background);
+    border: 0.1rem solid var(--button-primary-idle-border);
+    color: var(--button-primary-idle-text);
+
+    &:hover {
+      background-color: var(--button-primary-hover-background);
+      border: 0.1rem solid var(--button-primary-hover-border);
+      color: var(--button-primary-hover-text);
+    }
+
+    &:disabled {
+      background-color: var(--button-primary-disabled-background);
+      border: 0.1rem solid var(--button-primary-disabled-border);
+      color: var(--button-primary-disabled-text);
+      cursor: default;
+    }
+  }
+
+  &__secondary {
+    background-color: var(--button-secondary-idle-background);
+    border: 0.1rem solid var(--button-secondary-idle-border);
+    color: var(--button-secondary-idle-text);
+
+    &:hover {
+      background-color: var(--button-secondary-hover-background);
+      border: 0.1rem solid var(--button-secondary-hover-border);
+      color: var(--button-secondary-hover-text);
+    }
+
+    &:disabled {
+      background-color: var(--button-secondary-disabled-background);
+      border: 0.1rem solid var(--button-secondary-disabled-border);
+      color: var(--button-secondary-disabled-text);
+      cursor: default;
+    }
+  }
+}
